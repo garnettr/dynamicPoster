@@ -56,14 +56,13 @@ button:hover, button:focus {
 .form-wrapper {
   padding: 5% 7%;
   background: #f9de68;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f9de68), color-stop(60%, #f9de68), to(white));
-  background: linear-gradient(180deg, #f9de68 0%, #f9de68 60%, white 100%);
 }
 
 .form-wrapper p {
   padding-bottom: 5%;
   border-bottom: 2px dotted #b39f4c;
   margin-bottom: 7%;
+  line-height: 1.25em;
 }
 
 .form-wrapper h2 {
@@ -109,6 +108,10 @@ button:hover, button:focus {
   border-radius: .125em;
   padding: .65em;
   width: 100%;
+}
+
+.form-wrapper form span input:hover, .form-wrapper form span input:focus, .form-wrapper form span select:hover, .form-wrapper form span select:focus {
+  background: aliceblue;
 }
 
 @media only screen and (min-width: 636px) {
