@@ -6,4 +6,3 @@ Luckily the app below makes it easy, you can create a type based poster with let
 
 
 Active Link: xhttps://garnettr.github.io/dynamicPoster/
-Link: 
