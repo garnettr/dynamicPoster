@@ -5,4 +5,4 @@ Luckily the app below makes it easy, you can create a type based poster with let
  Bring your information to life, creating a playful and impactful typography poster.
 
 
-Active Link: xhttps://garnettr.github.io/dynamicPoster/
+Active Link: https://garnettr.github.io/dynamicPoster/
