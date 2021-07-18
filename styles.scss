@@ -1,7 +1,23 @@
 // Fonts
 @import url("https://use.typekit.net/exx2gkw.css");
+body {
+  font-size: 1.25em;
+  font-family: stolzl, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #182750;
+}
 
+.header {
+  padding: .5em;
+  margin: 0 auto;
+  font-size: 1.5em;
 
+  @media only screen and (min-width: 768px) {
+    padding: .75em;
+    font-size: 2.5em;
+  }
+}
 
 p {
 font-family: flood-std, sans-serif;
@@ -9,13 +25,7 @@ font-weight: 400;
 font-style: normal;
 }
 
-body {
-font-size: 1.25em;
-font-family: stolzl, sans-serif;
-font-weight: 500;
-font-style: normal;
-color: #182750;
-}
+
 main {
 display: flex;
 flex-direction: column;
@@ -38,143 +48,196 @@ button {
   }
 }
 
-.header {
-  padding: .5em;
-  margin-bottom: 0;
-  font-size: 1.5em;
-
-  @media only screen and (min-width: 768px) {
-    padding: 1em;
-    font-size: 2.5em;
+.error {
+  display: none;
+  color: #770707;
+  &.errorFound {
+    display: inline-block;
   }
 }
 
-.form-wrapper {
-  padding: 5% 7%;
+
+/* ================
+Top Form Content
+================== */
+.form-content {
   background: rgb(249,222,104);
-
-  p {
-    padding-bottom: 5%;
-    border-bottom: 2px dotted #b39f4c;
-    margin-bottom: 7%;
-    line-height: 1.25em;
-  }
-
-  h2 {
-    font-size: 1.25em;
-  }
-
-  form {
-    font-size: .85em;
-    width: 100%;
-    margin: 2% auto;
-
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-
-
-    span {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: .75em;
-
-    input, select {
-      border: 0;
-      margin-top: .65em;
-      border-radius: .125em;
-      padding: .65em;
-      width: 100%;
-
-      &:hover, &:focus {
-        background: aliceblue;
-      }
+  .form-wrapper {
+    padding: 5% 7%;
+    p {
+      padding-bottom: 5%;
+      border-bottom: 2px dotted #b39f4c;
+      margin-bottom: 7%;
+      line-height: 1.25em;
     }
 
-    @media only screen and (min-width: 636px) {
-      flex-direction: row;
-      input, select {
-        margin-top: 0;
-        border: 0;
-        border-radius: .125em;
-        width: 63%;
-      }
-    }
-
+    h2 {
+      font-size: 1.25em;
     }
 
     @media only screen and (min-width: 768px) {
-      width: 50%;
-      max-width: 36em;
-      align-items: flex-start;
-      margin: initial;
+      padding: 3% 7% 11%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      h2 {
+        width: 100%;
+        font-size: 1.5em;
+      }
+
+      p{
+        width: 40%;
+        border-bottom: none;
+        margin-bottom: 0;
+      }
     }
+    @media only screen and (min-width: 1200px) { 
+      width: 80%;
+      margin: auto;
+    }
+
+
+    // Start Form Styles 
+    form {
+      position: relative;
+      font-size: .85em;
+      width: 100%;
+      margin: 2% auto;
+
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+
+        // Form media query
+        @media only screen and (min-width: 768px) {
+          width: 50%;
+          max-width: 36em;
+          align-items: flex-start;
+          margin: initial;
+        }
+
+      // Span wraps Labels/inputs inside of forms 
+      span {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: .75em;
+
+        input, select {
+          border: 0;
+          margin-top: .65em;
+          border-radius: .125em;
+          padding: .65em;
+
+          &:hover, &:focus {
+            background: aliceblue;
+          }
+        }
+
+        @media only screen and (min-width: 636px) {
+          flex-direction: row;
+            input, select {
+              margin-top: 0;
+              border: 0;
+              border-radius: .125em;
+              width: 63%;
+            }
+        }
+      }
+
+      // Hides thanks message before form submission
+      .thanksMessage {
+        display: none;
+      }
+
+      /* On form submission hide the inner content of the form */
+      &.submitted {
+        span, button {
+          display: none;
+        }
+
+        /* On submission show thanks message*/
+        .thanksMessage {
+          display: inline-block;
+          width: 100%;
+          background: #fade67;
+          p {
+            width: 100%;
+            font-family: stolzl, sans-serif;
+            font-weight: 600;
+            font-size: 1.5em;
+      
+            @media only screen and (min-width: 636px) { 
+              font-size: 2em;
+            }
+          }
+        }
+      }
+    }
+    // End Form Styles
   }
+ 
+
+}
+
+/* ================
+Start Grid Container 
+================== */
+
+.grid-container {
+  margin: 2% 1% 0 1%;
+  transition: padding 1s, grid-template-columns 1s, grid-template-rows 1s;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 5px;
+  grid-template-rows: repeat(6, 25vh);
+  grid-row-gap: .25rem;
+  grid-template-areas: 
+  "petName petName" 
+  "hobby2 lastName"
+  "favColor lastName"
+  "firstName firstName"
+  "jobTitle favNumber"
+  "hobby1 hobby1"; 
+
 
   @media only screen and (min-width: 768px) {
+    background: #18284f;
+    margin-top: -4em;
+    width: 80%;
+    margin: -5% auto 0;
+    padding: 5% 5% 8%;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: .25rem;
+    grid-template-rows: repeat(5, 18rem);
+    grid-row-gap: .25rem;
+    grid-template-areas:
+      "firstName hobby2 hobby2"
+      "firstName caption lastName"
+      "firstName favColor lastName"
+      "hobby1 hobby1 favNumber"
+      "jobTitle petName petName";
+  }
+
+  // Inner Containers
+  div {
+    border-radius: 3px;
+    text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    h2 {
-      width: 100%;
-      font-size: 1.5em;
-    }
-
-    p{
-      width: 40%;
-      border-bottom: none;
-      margin-bottom: 0;
-    }
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
-
-  @media only screen and (min-width: 1200px) {
-    padding: 5% 10%;
-  }
-
-}
-.grid-container {
-margin: 2% 1% 0 1%;
-transition: padding 1s, grid-template-columns 1s, grid-template-rows 1s;
-display: grid;
-grid-template-columns: 50% 50%;
-grid-column-gap: 5px;
-grid-template-rows: repeat(6, 25vh);
-grid-row-gap: .25rem;
-grid-template-areas: 
-"petName petName" 
-"hobby2 lastName"
-"favColor lastName"
-"firstName firstName"
-"jobTitle favNumber"
-"hobby1 hobby1"; 
-
-
-@media only screen and (min-width: 768px) {
-padding: 5% 5% 8%;
-grid-template-columns: 1fr 1fr 1fr;
-grid-column-gap: .25rem;
-grid-template-rows: repeat(5, 18rem);
-grid-row-gap: .25rem;
-grid-template-areas:
-  "firstName hobby2 hobby2"
-  "firstName caption lastName"
-  "firstName favColor lastName"
-  "hobby1 hobby1 favNumber"
-  "jobTitle petName petName";
 }
 
-div {
-border-radius: 3px;
-text-align: center;
-display: flex;
-align-items: center;
-justify-content: center;
-overflow: hidden;
-}
-}
+
+/* ==========================
+Individual Subject Containers 
+============================ */
+
 .firstName-Container { 
 grid-area: firstName;
 background-color: #72cef7;

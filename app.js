@@ -24,6 +24,8 @@ const hobby2Container = document.querySelector('.hobby2-Container');
 const jobContainer = document.querySelector('.jobTitle-Container');
 const favColorContainer = document.querySelector('.colorContainer');
 const favNumContainer = document.querySelector('.favNumber-Container');
+const thanksContainer = document.querySelector('.thanksMessage');
+const error = document.querySelector('.error');
  
 
 /* -------------------------------------------------------------*/
@@ -90,20 +92,30 @@ function StyleElement() {
 function createProfile() {
   let generateStyle = new StyleElement();
 
-  // Let's generate the styled elements to be placed on the page
-  generateStyle.printToPage(generateStyle.firstInitialStyle, firstNameContainer);
-  generateStyle.printToPage(generateStyle.lastInitialStyle, lastNameContainer);
-  generateStyle.printToPage(generateStyle.hobby1Style, hobby1Container);
-  generateStyle.printToPage(generateStyle.hobby2Style, hobby2Container);
-  generateStyle.printToPage(generateStyle.jobStyle, jobContainer);
-  generateStyle.printToPage(generateStyle.favColorStyle, favColorContainer);
-  generateStyle.printToPage(generateStyle.petNameStyle, petContainer);
-  generateStyle.printToPage(generateStyle.favNumStyle, favNumContainer);
+  if (inputFirstNme.value.length != 0 || inputLastNme.value.length != 0) {
+    // Let's generate the styled elements to be placed on the page
+    generateStyle.printToPage(generateStyle.firstInitialStyle, firstNameContainer);
+    generateStyle.printToPage(generateStyle.lastInitialStyle, lastNameContainer);
+    generateStyle.printToPage(generateStyle.hobby1Style, hobby1Container);
+    generateStyle.printToPage(generateStyle.hobby2Style, hobby2Container);
+    generateStyle.printToPage(generateStyle.jobStyle, jobContainer);
+    generateStyle.printToPage(generateStyle.favColorStyle, favColorContainer);
+    generateStyle.printToPage(generateStyle.petNameStyle, petContainer);
+    generateStyle.printToPage(generateStyle.favNumStyle, favNumContainer);
 
-  /* Now let's disable the submit button
-  so it's not clicked "51" times :) */
-  formButton.disabled = true;
+    /* Now let's disable the submit button
+    so it's not clicked "51" times :) */
+    formButton.disabled = true;
+
+    // Add class to show thanks message after 
+    form.classList.add("submitted");
+
+    error.classList.remove("errorFound");
+  } else {
+    error.classList.add("errorFound");
+  }
+
+
 };
-
 
 

@@ -1,16 +1,29 @@
 @import url("https://use.typekit.net/exx2gkw.css");
-p {
-  font-family: flood-std, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 body {
   font-size: 1.25em;
   font-family: stolzl, sans-serif;
   font-weight: 500;
   font-style: normal;
   color: #182750;
+}
+
+.header {
+  padding: .5em;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: .75em;
+    font-size: 2.5em;
+  }
+}
+
+p {
+  font-family: flood-std, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 main {
@@ -40,36 +53,69 @@ button:hover, button:focus {
   border: 2px solid #ffffff;
 }
 
-.header {
-  padding: .5em;
-  margin-bottom: 0;
-  font-size: 1.5em;
+.error {
+  display: none;
+  color: #770707;
 }
 
-@media only screen and (min-width: 768px) {
-  .header {
-    padding: 1em;
-    font-size: 2.5em;
-  }
+.error.errorFound {
+  display: inline-block;
 }
 
-.form-wrapper {
-  padding: 5% 7%;
+/* ================
+Top Form Content
+================== */
+.form-content {
   background: #f9de68;
 }
 
-.form-wrapper p {
+.form-content .form-wrapper {
+  padding: 5% 7%;
+}
+
+.form-content .form-wrapper p {
   padding-bottom: 5%;
   border-bottom: 2px dotted #b39f4c;
   margin-bottom: 7%;
   line-height: 1.25em;
 }
 
-.form-wrapper h2 {
+.form-content .form-wrapper h2 {
   font-size: 1.25em;
 }
 
-.form-wrapper form {
+@media only screen and (min-width: 768px) {
+  .form-content .form-wrapper {
+    padding: 3% 7% 11%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .form-content .form-wrapper h2 {
+    width: 100%;
+    font-size: 1.5em;
+  }
+  .form-content .form-wrapper p {
+    width: 40%;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .form-content .form-wrapper {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.form-content .form-wrapper form {
+  position: relative;
   font-size: .85em;
   width: 100%;
   margin: 2% auto;
@@ -85,9 +131,21 @@ button:hover, button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* On form submission hide the inner content of the form */
 }
 
-.form-wrapper form span {
+@media only screen and (min-width: 768px) {
+  .form-content .form-wrapper form {
+    width: 50%;
+    max-width: 36em;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: initial;
+  }
+}
+
+.form-content .form-wrapper form span {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,26 +160,25 @@ button:hover, button:focus {
   margin-bottom: .75em;
 }
 
-.form-wrapper form span input, .form-wrapper form span select {
+.form-content .form-wrapper form span input, .form-content .form-wrapper form span select {
   border: 0;
   margin-top: .65em;
   border-radius: .125em;
   padding: .65em;
-  width: 100%;
 }
 
-.form-wrapper form span input:hover, .form-wrapper form span input:focus, .form-wrapper form span select:hover, .form-wrapper form span select:focus {
+.form-content .form-wrapper form span input:hover, .form-content .form-wrapper form span input:focus, .form-content .form-wrapper form span select:hover, .form-content .form-wrapper form span select:focus {
   background: aliceblue;
 }
 
 @media only screen and (min-width: 636px) {
-  .form-wrapper form span {
+  .form-content .form-wrapper form span {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .form-wrapper form span input, .form-wrapper form span select {
+  .form-content .form-wrapper form span input, .form-content .form-wrapper form span select {
     margin-top: 0;
     border: 0;
     border-radius: .125em;
@@ -129,45 +186,40 @@ button:hover, button:focus {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .form-wrapper form {
-    width: 50%;
-    max-width: 36em;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin: initial;
+.form-content .form-wrapper form .thanksMessage {
+  display: none;
+}
+
+.form-content .form-wrapper form.submitted {
+  /* On submission show thanks message*/
+}
+
+.form-content .form-wrapper form.submitted span, .form-content .form-wrapper form.submitted button {
+  display: none;
+}
+
+.form-content .form-wrapper form.submitted .thanksMessage {
+  display: inline-block;
+  width: 100%;
+  background: #fade67;
+}
+
+.form-content .form-wrapper form.submitted .thanksMessage p {
+  width: 100%;
+  font-family: stolzl, sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+@media only screen and (min-width: 636px) {
+  .form-content .form-wrapper form.submitted .thanksMessage p {
+    font-size: 2em;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .form-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .form-wrapper h2 {
-    width: 100%;
-    font-size: 1.5em;
-  }
-  .form-wrapper p {
-    width: 40%;
-    border-bottom: none;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .form-wrapper {
-    padding: 5% 10%;
-  }
-}
-
+/* ================
+Start Grid Container 
+================== */
 .grid-container {
   margin: 2% 1% 0 1%;
   -webkit-transition: padding 1s, grid-template-columns 1s, grid-template-rows 1s;
@@ -186,6 +238,10 @@ button:hover, button:focus {
 
 @media only screen and (min-width: 768px) {
   .grid-container {
+    background: #18284f;
+    margin-top: -4em;
+    width: 80%;
+    margin: -5% auto 0;
     padding: 5% 5% 8%;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
@@ -212,6 +268,9 @@ button:hover, button:focus {
   overflow: hidden;
 }
 
+/* ==========================
+Individual Subject Containers 
+============================ */
 .firstName-Container {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
