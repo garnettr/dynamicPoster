@@ -92,7 +92,7 @@ function StyleElement() {
 function createProfile() {
   let generateStyle = new StyleElement();
 
-  if (inputFirstNme.value.length != 0 || inputLastNme.value.length != 0) {
+  if (inputFirstNme.value.length != 0 && inputLastNme.value.length != 0) {
     // Let's generate the styled elements to be placed on the page
     generateStyle.printToPage(generateStyle.firstInitialStyle, firstNameContainer);
     generateStyle.printToPage(generateStyle.lastInitialStyle, lastNameContainer);
