@@ -51,13 +51,6 @@ function Person() {
   this.secondInitial = this.lastName[0];
 }
 
-// Method takes an element, inserts data inside and renders element onto page
-Person.prototype.applyStyles = function(element, text, parentContainer) {
-  var elementToPage = element;
-  elementToPage.innerText = this[text];
-  parentContainer.append(elementToPage);
-}
-
 
 function StyleElements() {
 
@@ -73,6 +66,14 @@ function StyleElements() {
   this.applyStyles(document.createElement('p'), ['petName'], petContainer);
   this.applyStyles(document.createElement('h3'), ['favNumber'], favNumContainer);
 }
+
+// Method takes an element, inserts data inside and renders element onto page
+StyleElements.prototype.applyStyles = function(element, text, parentContainer) {
+  var elementToPage = element;
+  elementToPage.innerText = this[text];
+  parentContainer.append(elementToPage);
+}
+
 
 
 
