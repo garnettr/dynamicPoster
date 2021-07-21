@@ -49,40 +49,34 @@ function Person() {
   this.petName = petName.value;
   this.firstInitial = this.firstName[0];
   this.secondInitial = this.lastName[0];
-
-  /* Method takes element and inserts
-  data inside and returnsS Element */
-  this.applyStyles = function(element, text) {
-    var elementToPage = element;
-    elementToPage.innerText = this[text];
-    return elementToPage;
-  }
-
 }
 
-/* "Style Element" a Constructor Object
-"Saves newly created elements and copy/data to keys that
-can then be placed on the page  */
-function StyleElement() {
+// Method takes an element, inserts data inside and renders element onto page
+Person.prototype.applyStyles = function(element, text, parentContainer) {
+  var elementToPage = element;
+  elementToPage.innerText = this[text];
+  parentContainer.append(elementToPage);
+}
 
-  // binds the 'This' keyword to Person Object
+
+function StyleElements() {
+
+  // Calls the Person Object inside this function
   Person.call(this);
 
-  // Defines new keys and elements values
-  this.firstInitialStyle = this.applyStyles(document.createElement('p'), ['firstInitial']);
-  this.lastInitialStyle = this.applyStyles(document.createElement('p'), ['secondInitial']);
-  this.hobby1Style = this.applyStyles(document.createElement('p'), ['hobby1']);
-  this.hobby2Style = this.applyStyles(document.createElement('p'), ['hobby2']);
-  this.jobStyle = this.applyStyles(document.createElement('p'), ['jobTitle']);
-  this.favColorStyle = this.applyStyles(document.createElement('p'), ['favColor']);
-  this.petNameStyle = this.applyStyles(document.createElement('p'), ['petName']);
-  this.favNumStyle = this.applyStyles(document.createElement('h3'), ['favNumber']);
-
-  // Method appends elements to containers of your choice
-  this.printToPage = function(element, parentContainer) {
-    parentContainer.append(element);
-  }
+  this.applyStyles(document.createElement('p'), ['firstInitial'], firstNameContainer);
+  this.applyStyles(document.createElement('p'), ['secondInitial'], lastNameContainer);
+  this.applyStyles(document.createElement('p'), ['hobby1'], hobby1Container);
+  this.applyStyles(document.createElement('p'), ['hobby2'], hobby2Container);
+  this.applyStyles(document.createElement('p'), ['jobTitle'], jobContainer);
+  this.applyStyles(document.createElement('p'), ['favColor'], favColorContainer);
+  this.applyStyles(document.createElement('p'), ['petName'], petContainer);
+  this.applyStyles(document.createElement('h3'), ['favNumber'], favNumContainer);
 }
+
+
+
+
 
 
 /* ------------------------------------------- */
@@ -90,18 +84,10 @@ function StyleElement() {
 // Build Function
 
 function createProfile() {
-  let generateStyle = new StyleElement();
 
   if (inputFirstNme.value.length != 0 && inputLastNme.value.length != 0) {
     // Let's generate the styled elements to be placed on the page
-    generateStyle.printToPage(generateStyle.firstInitialStyle, firstNameContainer);
-    generateStyle.printToPage(generateStyle.lastInitialStyle, lastNameContainer);
-    generateStyle.printToPage(generateStyle.hobby1Style, hobby1Container);
-    generateStyle.printToPage(generateStyle.hobby2Style, hobby2Container);
-    generateStyle.printToPage(generateStyle.jobStyle, jobContainer);
-    generateStyle.printToPage(generateStyle.favColorStyle, favColorContainer);
-    generateStyle.printToPage(generateStyle.petNameStyle, petContainer);
-    generateStyle.printToPage(generateStyle.favNumStyle, favNumContainer);
+    let generateStyle = new StyleElements();
 
     /* Now let's disable the submit button
     so it's not clicked "51" times :) */
@@ -114,7 +100,6 @@ function createProfile() {
   } else {
     error.classList.add("errorFound");
   }
-
 
 };
 
