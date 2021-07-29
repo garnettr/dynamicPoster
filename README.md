@@ -48,9 +48,9 @@ function applyStyles(element, text, parentContainer) {
 ```
 
 
-Now that the .JS was all settled (for now) it was time to put CSS in motion and I thought what a great opportunity to brush up on CSS Grids.
+Now that the .JS was all settled (for now) it was time to put the CSS in motion and I thought what a great opportunity to brush up on CSS Grids.
 
-
+> .gif of responsive grid, coming soon! 
 
 
 **Future Goals:** 
