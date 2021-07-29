@@ -51,7 +51,7 @@ function createProfile() {
 
 
     applyStyles(document.createElement('p'), inputFirstNme.value[0], firstNameContainer);
-    applyStyles(document.createElement('p'), inputFirstNme.value[0], lastNameContainer);
+    applyStyles(document.createElement('p'), inputLastNme.value[0], lastNameContainer);
     applyStyles(document.createElement('p'), hobby1.value, hobby1Container);
     applyStyles(document.createElement('p'), hobby2.value, hobby2Container);
     applyStyles(document.createElement('p'), jobTitle.value, jobContainer);
