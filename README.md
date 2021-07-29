@@ -6,7 +6,7 @@
 While working through my [Udemy Course](demy.com/course/understand-javascript/), I thought it would be a great idea to practice some of the skills I was learning.
 
 The initial idea for this project was to practice using Constructor Functions  -  I quickly realized that was overkill for this project
-(Yes I know this is a old pattern :sweat_smile: and you could/should use Class )
+(Yes I know this is a old pattern :sweat_smile: and you could/should use Class).
 
 **Before the code looked something like this:**
 
@@ -37,7 +37,7 @@ The initial idea for this project was to practice using Constructor Functions  -
  I decided maybe this wasn’t the best place to use Constructor Functions and that I should probably practice using the Class pattern in my next project. 
 So I stripped the code down to a very simple solution. 
 
-**And now the code looks something like this**
+**And now the code looks something like this:**
 
 ```
 function applyStyles(element, text, parentContainer) {
