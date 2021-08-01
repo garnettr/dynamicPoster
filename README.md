@@ -1,3 +1,4 @@
+
 # [DynamicPoster](https://garnettr.github.io/dynamicPoster/)
 
 ![bkg-test-4](https://user-images.githubusercontent.com/28959285/127429614-60b98b39-85cf-4000-aac3-7bdc3f957322.jpg)
@@ -50,7 +51,8 @@ function applyStyles(element, text, parentContainer) {
 
 Now that the .JS was all settled (for now) it was time to put the CSS in motion and I thought what a great opportunity to brush up on CSS Grids.
 
-> .gif of responsive grid, coming soon! 
+![responsive-4](https://user-images.githubusercontent.com/28959285/127758935-d87f856d-389a-420d-a705-86e2af406d22.gif)
+
 
 
 **Future Goals:** 
