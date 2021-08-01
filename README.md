@@ -4,10 +4,10 @@
 ![bkg-test-4](https://user-images.githubusercontent.com/28959285/127429614-60b98b39-85cf-4000-aac3-7bdc3f957322.jpg)
 
 
-While working through my [Udemy Course](demy.com/course/understand-javascript/), I thought it would be a great idea to build a mini project to practice of the patterns I was learning.
+While working through my [Udemy Course](demy.com/course/understand-javascript/), I thought it would be a great idea to build a mini project to practice the patterns I was learning.
 
 
-### What the web app does 
+### What the Web app does:
 
 This project is a typeography poster that is dynamically generated using your information. 
 
@@ -18,6 +18,8 @@ Once the information is submitted you receive a styled responsive typeography po
 
 
 ---- 
+
+### Purpose of the Web app:
 
 The initial idea was to practice using Constructor Functions  - UNTIL -  I wrote the code and decided to refacture it. 
 
