@@ -7,9 +7,9 @@
 > While working through my [Udemy Course](demy.com/course/understand-javascript/), I thought it would be a great idea to build a mini project to practice the patterns I was learning.
 
 
-### What the Web app does:
+### What the Web App does:
 
-This project is a typography poster that is dynamically generated using your information. 
+Dynamically generates a typography poster based on the users information. 
 
 ##### It asks 8 basic questions: 
 First Name, Last Name, Hobby 1, Hobby 2, Job Title, Pet Name, Color and Favorite Number 
@@ -19,7 +19,7 @@ Once the information is submitted you receive a styled responsive typography pos
 
 ---- 
 
-### Purpose of the Web app:
+### Purpose of the Web App:
 
 To practice using Constructor Functions and CSS Grids, *UNTIL* I starting writing the constructor functions and decided to refactor it. 
 
