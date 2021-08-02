@@ -1,5 +1,5 @@
 
-# [DynamicPoster](https://garnettr.github.io/dynamicPoster/)
+# [DynamicPoster](https://garnettr.GitHub.io/dynamicPoster/)
 
 ![bkg-test-4](https://user-images.githubusercontent.com/28959285/127429614-60b98b39-85cf-4000-aac3-7bdc3f957322.jpg)
 
@@ -9,19 +9,19 @@
 
 ### What the Web app does:
 
-This project is a typeography poster that is dynamically generated using your information. 
+This project is a typography poster that is dynamically generated using your information. 
 
-##### It askes 8 basic questions: 
+##### It asks 8 basic questions: 
 First Name, Last Name, Hobby 1, Hobby 2, Job Title, Pet Name, Color and Favorite Number 
 
-Once the information is submitted you receive a styled responsive typeography poster with you information.
+Once the information is submitted you receive a styled responsive typography poster with you information.
 
 
 ---- 
 
 ### Purpose of the Web app:
 
-To practice using Constructor Functions and CSS Grids, *UNTIL* I starting writing the constructor functions and decided to refacture it. 
+To practice using Constructor Functions and CSS Grids, *UNTIL* I starting writing the constructor functions and decided to refactor it. 
 
 **Before the code looked something like this:**
 
