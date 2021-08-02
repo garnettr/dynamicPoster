@@ -90,6 +90,6 @@ Once the JS was settled (for now) it was time to put the responsive frame togeth
 
 
 ### Future Goals: 
-- To make the page dynamic to your color choice
+- Dynamic color theme based on users favorite color choice 
 - Adding a color picker
 
