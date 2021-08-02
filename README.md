@@ -81,7 +81,7 @@ Once the JS was settled (for now) it was time to put the responsive frame togeth
 
 2: Change the working directory
 
-``` CD dynamicPoste ```
+``` CD dynamicPoster ```
 
 3: Start your Live Server or manually open the Index.html in the browser
 
