@@ -63,9 +63,27 @@ function applyStyles(element, text, parentContainer) {
 ```
 
 
+
+### CSS Grid
 Once the JS was settled (for now) it was time to put the responsive frame together using CSS Grids.
 
 ![responsive-4](https://user-images.githubusercontent.com/28959285/127758935-d87f856d-389a-420d-a705-86e2af406d22.gif)
+
+
+----
+
+
+### Installation Steps
+
+1: Clone the repository
+
+> git clone https://github.com/garnettr/dynamicPoster.git
+
+2: Change the working directory
+
+> CD dynamicPoste
+
+3: Start your Live Server or manually open the Index.html in the browser
 
 
 
