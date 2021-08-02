@@ -77,17 +77,19 @@ Once the JS was settled (for now) it was time to put the responsive frame togeth
 
 1: Clone the repository
 
-> git clone https://github.com/garnettr/dynamicPoster.git
+``` git clone https://github.com/garnettr/dynamicPoster.git ```
 
 2: Change the working directory
 
-> CD dynamicPoste
+``` CD dynamicPoste ```
 
 3: Start your Live Server or manually open the Index.html in the browser
 
 
+----
 
-**Future Goals:** 
+
+### Future Goals: 
 - To make the page dynamic to your color choice
 - Adding a color picker
 
